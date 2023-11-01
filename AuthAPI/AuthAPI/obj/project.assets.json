@@ -1559,19 +1559,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Estágio 1\\.nuget\\packages\\": {}
+    "C:\\Users\\tipos\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Estágio 1\\source\\repos\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
+      "projectUniqueName": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\authAPI\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
       "projectName": "AuthAPI",
-      "projectPath": "C:\\Users\\Estágio 1\\source\\repos\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
-      "packagesPath": "C:\\Users\\Estágio 1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Estágio 1\\source\\repos\\AuthAPI\\AuthAPI\\obj\\",
+      "projectPath": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\authAPI\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
+      "packagesPath": "C:\\Users\\tipos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\authAPI\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Estágio 1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tipos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1641,7 +1645,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
