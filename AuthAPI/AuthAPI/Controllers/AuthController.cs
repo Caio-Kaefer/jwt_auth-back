@@ -16,7 +16,7 @@ namespace AuthAPI.Controllers
         private readonly Token _token = new Token();
 
         [HttpPost ("login")] 
-        public async Task<ActionResult> Auth([FromServices] context _context, [FromBody] UserLoginInterface postedUser)
+        public async Task<ActionResult> Auth([FromServices] ApplicationDbContext _context, [FromBody] UserLoginInterface postedUser)
         {
            
             var user = await _context.usuarios.FirstOrDefaultAsync(u => u.email == postedUser.email );
@@ -35,7 +35,8 @@ namespace AuthAPI.Controllers
             tokenbuilder.AddClaim("age", user.age.ToString());
             var token = tokenbuilder.Build();
             return Ok(JToken.Parse(JsonConvert.SerializeObject(token)).ToString(Formatting.Indented));
-        }
+        }        
+        
     }
 }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3tK+s601E/+Yav5p0FwnHIE0MGdibyunF1AmO+LZOk7XZXlEI7mXrhQ5Hhyb72Rfb0n36c9f+u6BCgcLTTeJ8w==",
+  "dgSpecHash": "aJRfNOVclnzPSGXEMYkqd7hkfIlEROel4840EJROi0TP3/h6rmpT7kcqh1A6mNOAX6RB3yVKKees/xDuQmaQqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\authAPI\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
+  "projectFilePath": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\auth\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tipos\\.nuget\\packages\\jwt\\10.1.1\\jwt.10.1.1.nupkg.sha512",
     "C:\\Users\\tipos\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",

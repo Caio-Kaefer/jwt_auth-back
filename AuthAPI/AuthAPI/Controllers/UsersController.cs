@@ -1,9 +1,9 @@
 ﻿using AuthAPI.Data;
 using AuthAPI.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Threading.Tasks;
 
 namespace AuthAPI.Controllers
 {
@@ -11,26 +11,67 @@ namespace AuthAPI.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        [HttpPost("cadastro")]
-        public async Task<ActionResult> signup([FromServices] context _context, [FromBody] User postedUser)
+        private readonly ApplicationDbContext _context;
+
+        public UsersController(ApplicationDbContext context)
         {
-            var existingUser = await _context.usuarios.FirstOrDefaultAsync(u => u.email == postedUser.email);
-            if (existingUser != null)
-            {
-                return BadRequest("Email já cadastrado");
-            }
-
-             _context.Add(postedUser);
-             await _context.SaveChangesAsync();
-
-            return Ok("usuario cadastrado");
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        [HttpGet("usuarios")]
-        public async Task<ActionResult> getusers([FromServices] context _context)
+        [HttpPost("cadastro")]
+        public async Task<ActionResult> Signup([FromBody] User postedUser)
         {
-            var users = await _context.usuarios.ToListAsync();
-            return Ok(users);
+            try
+            {
+                if (await _context.usuarios.AnyAsync(u => u.email == postedUser.email))
+                {
+                    return BadRequest("Email já cadastrado");
+                }
+
+                _context.usuarios.Add(postedUser);
+                await _context.SaveChangesAsync();
+
+                return Ok("Usuário cadastrado");
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine(ex);
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var user = await _context.usuarios.FirstOrDefaultAsync(u => u.Id == id);
+            if (user == null)
+            {
+                return BadRequest("Usuário não encontrado");
+            }
+
+            _context.usuarios.Remove(user);
+            await _context.SaveChangesAsync();
+
+            return Ok("Usuário removido com sucesso");
+        }
+
+
+
+        [HttpGet("usuarios")]
+        public async Task<ActionResult> GetUsers()
+        {
+            try
+            {
+                var users = await _context.usuarios.ToListAsync();
+                return Ok(users);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine(ex);
+                return StatusCode(500, "Internal server error");
+            }
         }
     }
 }

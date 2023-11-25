@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\authAPI\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj": {}
+    "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\auth\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\authAPI\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj": {
+    "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\auth\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\authAPI\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
+        "projectUniqueName": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\auth\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
         "projectName": "AuthAPI",
-        "projectPath": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\authAPI\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
+        "projectPath": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\auth\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\AuthAPI.csproj",
         "packagesPath": "C:\\Users\\tipos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\authAPI\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\obj\\",
+        "outputPath": "C:\\Users\\tipos\\OneDrive\\Área de Trabalho\\projects\\auth\\JWT_Auth_Back\\AuthAPI\\AuthAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
