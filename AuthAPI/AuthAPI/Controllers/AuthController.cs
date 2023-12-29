@@ -30,6 +30,7 @@ namespace AuthAPI.Controllers
             }
             var tokenbuilder = new JwtTokenBuilder()
                 .AddSecurityKey(JwtSecurityKey.Create(_token.JwtKey()));
+            tokenbuilder.AddClaim("id", user.Id.ToString());
             tokenbuilder.AddClaim("nome", user.name);
             tokenbuilder.AddClaim("email", user.email);
             tokenbuilder.AddClaim("age", user.age.ToString());

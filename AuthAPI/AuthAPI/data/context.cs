@@ -10,6 +10,7 @@ namespace AuthAPI.Data // Corrigindo o namespace para "AuthAPI.Data"
         }
 
         public virtual DbSet<User> usuarios { get; set; } = null!;
+        public virtual DbSet<AddFavoriteInterface> favoritos { get; set; } = null!;
 
     }
 }
