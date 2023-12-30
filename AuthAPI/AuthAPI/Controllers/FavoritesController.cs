@@ -22,6 +22,10 @@ namespace AuthAPI.Controllers
         {
             if (ModelState.IsValid)
             {
+                var existingFavorite = _context.favoritos.FirstOrDefault(x => x.DrinkId == favorite.DrinkId);
+                if (existingFavorite != null) {
+                    return BadRequest("favorito ja adicionado");
+                }
                 _context.favoritos.Add(favorite);
                 await _context.SaveChangesAsync();
                 return Ok(favorite);
