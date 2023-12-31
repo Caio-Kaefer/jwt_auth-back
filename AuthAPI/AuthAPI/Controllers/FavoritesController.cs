@@ -40,12 +40,45 @@ namespace AuthAPI.Controllers
             {
                 var favList = await _context.favoritos
                     .Where(f => f.UserId == id)
-                    .ToListAsync(); 
+                    .ToListAsync();
+
+                if (favList == null || favList.Count == 0)
+                {
+                    return NotFound("Nenhum favorito encontrado para o usuário especificado.");
+                }
 
                 return Ok(favList);
             }
             return BadRequest(ModelState);
         }
+
+        [HttpDelete("deletefavorite")]
+        public async Task<ActionResult> DeleteFavorite(int DrinkId, int id)
+        {
+            if (ModelState.IsValid)
+            {
+                var fav = await _context.favoritos
+                    .Where(f => f.UserId == id && f.DrinkId == DrinkId)
+                    .ToListAsync();
+
+                if (fav.Any())
+                {
+                    _context.favoritos.RemoveRange(fav); 
+                    await _context.SaveChangesAsync(); 
+                    return Ok(fav);
+                }
+                else
+                {
+                    return NotFound(); 
+                }
+            }
+            return BadRequest(ModelState);
+        }
+
+
+
+
+
 
     }
 }
